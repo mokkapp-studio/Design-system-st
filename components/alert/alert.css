@@ -1,0 +1,45 @@
+/* Alert · solo usa los tokens declarados en registry/json/Alert.json */
+
+.alert {
+  display: grid;
+  align-content: start;
+  gap: var(--size-space-stack-sm);
+  padding: var(--size-space-alert);
+  border: var(--size-border-default) solid var(--color-border-subtle);
+  border-left-width: var(--size-border-accent);
+  border-radius: var(--size-radius-control);
+  background: var(--color-surface-raised);
+  color: var(--color-text-primary);
+}
+
+.alert--info {
+  border-left-color: var(--color-border-strong);
+}
+
+.alert--error {
+  border-left-color: var(--color-feedback-error-border);
+}
+
+.alert__title {
+  margin: 0;
+  font-family: var(--font-subtitle-family);
+  font-size: var(--font-subtitle-size);
+  font-weight: var(--font-subtitle-weight);
+}
+
+.alert--error .alert__title {
+  color: var(--color-feedback-error-text);
+}
+
+.alert__body {
+  display: grid;
+  gap: var(--size-space-stack-sm);
+  justify-items: start;
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  line-height: 1.5;
+}
+
+.alert__body > p {
+  margin: 0;
+}

@@ -1,0 +1,55 @@
+/* Button · solo usa los tokens declarados en registry/json/Button.json */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--size-control-height);
+  padding: var(--size-space-control-y) var(--size-space-control-x);
+  border: var(--size-border-default) solid transparent;
+  border-radius: var(--size-radius-control);
+  font-family: var(--font-button-family);
+  font-size: var(--font-button-size);
+  font-weight: var(--font-button-weight);
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color 150ms ease-out;
+}
+
+.button:focus-visible {
+  outline: var(--size-border-focus) solid var(--color-focus-ring);
+  outline-offset: var(--size-space-focus-offset);
+}
+
+.button--primary {
+  background: var(--color-action-primary-bg);
+  color: var(--color-action-primary-text);
+}
+.button--primary:hover:not(:disabled) {
+  background: var(--color-action-primary-bg-hover);
+}
+
+.button--secondary {
+  background: var(--color-action-secondary-bg);
+  color: var(--color-action-secondary-text);
+  border-color: var(--color-action-secondary-border);
+}
+.button--secondary:hover:not(:disabled) {
+  background: var(--color-action-secondary-bg-hover);
+}
+
+.button--tertiary {
+  background: transparent;
+  color: var(--color-action-tertiary-text);
+  border-color: var(--color-action-tertiary-border);
+}
+.button--tertiary:hover:not(:disabled) {
+  background: var(--color-action-tertiary-bg-hover);
+}
+
+.button:disabled {
+  background: var(--color-action-disabled-bg);
+  color: var(--color-action-disabled-text);
+  border-color: transparent;
+  cursor: not-allowed;
+}

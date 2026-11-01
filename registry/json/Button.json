@@ -1,0 +1,82 @@
+{
+  "name": "Button",
+  "version": "1.0.0",
+  "status": "stable",
+  "owner": "Xavier Pascual · Mokkapp.com",
+  "description": "Desencadena una acción del usuario. Hay una sola acción primaria por sección.",
+  "files": {
+    "component": "components/button/button.tsx",
+    "styles": "components/button/button.css",
+    "test": "components/button/button.spec.ts"
+  },
+  "anatomy": ["contenedor", "etiqueta", "anillo de foco"],
+  "props": {
+    "variant": { "type": "enum", "values": ["primary", "secondary", "tertiary"], "default": "primary", "description": "Jerarquía visual de la acción" },
+    "children": { "type": "string", "required": true, "description": "Texto del botón (ver content/voice.md#botones)" },
+    "disabled": { "type": "boolean", "default": false, "description": "Desactiva la acción" },
+    "type": { "type": "enum", "values": ["button", "submit", "reset"], "default": "button", "description": "Tipo HTML del botón" }
+  },
+  "states": ["default", "hover", "focus-visible", "disabled"],
+  "tokens": {
+    "primary.background": "color.action.primary.bg",
+    "primary.background-hover": "color.action.primary.bg-hover",
+    "primary.text": "color.action.primary.text",
+    "secondary.background": "color.action.secondary.bg",
+    "secondary.background-hover": "color.action.secondary.bg-hover",
+    "secondary.border": "color.action.secondary.border",
+    "secondary.text": "color.action.secondary.text",
+    "tertiary.background-hover": "color.action.tertiary.bg-hover",
+    "tertiary.border": "color.action.tertiary.border",
+    "tertiary.text": "color.action.tertiary.text",
+    "disabled.background": "color.action.disabled.bg",
+    "disabled.text": "color.action.disabled.text",
+    "focus.ring": "color.focus.ring",
+    "focus.width": "size.border.focus",
+    "focus.offset": "size.space.focus-offset",
+    "border.width": "size.border.default",
+    "radius": "size.radius.control",
+    "height": "size.control.height",
+    "padding.x": "size.space.control-x",
+    "padding.y": "size.space.control-y",
+    "font.family": "font.button.family",
+    "font.size": "font.button.size",
+    "font.weight": "font.button.weight"
+  },
+  "content": {
+    "guideline": "content/voice.md#botones",
+    "maxWords": 3
+  },
+  "a11y": {
+    "element": "button",
+    "focus": "Anillo visible solo con teclado (:focus-visible)",
+    "minTarget": "44px de alto",
+    "contrast": "Texto/fondo ≥ 4.5:1 en default y hover"
+  },
+  "rules": {
+    "always": [
+      "Usar el elemento <button> (para navegar se usa un enlace, no este componente)",
+      "Usar solo los tokens declarados en este contrato",
+      "Una sola variante primary por sección"
+    ],
+    "never": [
+      "Sombras (box-shadow)",
+      "Colores de acento",
+      "Valores hex o px escritos a mano",
+      "Variantes que no estén en props.variant",
+      "Iconos (no forman parte de la v1)"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Radio de 8px (size.radius.control)",
+      "why": "La referencia de marca usaba 8px y 16px para botones según la sección. Se fija 8px para controles y 16px para superficies, y así se elimina la ambigüedad."
+    },
+    {
+      "decision": "Hover por cambio de tono, no por opacidad",
+      "why": "Un token explícito (bg-hover) se puede verificar; una opacidad mezcla colores que nadie ha decidido."
+    }
+  ],
+  "openQuestions": [
+    "¿Necesitamos un tamaño pequeño para tablas y barras de herramientas?"
+  ]
+}

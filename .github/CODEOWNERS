@@ -1,0 +1,6 @@
+# Quién aprueba cada parte del sistema.
+# Sustituye @TU-USUARIO por tu usuario de GitHub (o el del equipo de diseño).
+/tokens/      @TU-USUARIO
+/registry/    @TU-USUARIO
+/content/     @TU-USUARIO
+/AGENTS.md    @TU-USUARIO

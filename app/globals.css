@@ -1,0 +1,100 @@
+/* Estilos de página. Solo tokens semánticos: nada de hex, px ni sombras. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  line-height: 1.5;
+}
+
+.band {
+  padding: var(--size-space-section) var(--size-space-gutter);
+}
+
+.band--inverse {
+  background: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+}
+
+.container {
+  max-width: var(--size-layout-page);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--size-space-stack-lg);
+}
+
+.reading {
+  max-width: var(--size-layout-reading);
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-eyebrow-family);
+  font-size: var(--font-eyebrow-size);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.band--inverse .eyebrow {
+  color: var(--color-text-inverse);
+}
+
+.display {
+  margin: 0;
+  font-family: var(--font-display-family);
+  font-size: var(--font-display-size);
+  font-weight: var(--font-display-weight);
+  line-height: 1.15;
+}
+
+.lead {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-space-stack-md);
+}
+
+.form {
+  display: grid;
+  gap: var(--size-space-stack-lg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--size-space-stack-lg);
+}
+
+.swatch {
+  display: grid;
+  gap: var(--size-space-stack-sm);
+  font-family: var(--font-eyebrow-family);
+  font-size: var(--font-eyebrow-size);
+}
+
+.swatch__color {
+  height: var(--size-space-section);
+  border: var(--size-border-default) solid var(--color-border-subtle);
+  border-radius: var(--size-radius-control);
+}
+
+.footer {
+  font-family: var(--font-eyebrow-family);
+  font-size: var(--font-eyebrow-size);
+  text-transform: uppercase;
+}
+
+.footer a {
+  color: inherit;
+}

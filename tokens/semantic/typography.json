@@ -1,0 +1,102 @@
+{
+  "$description": "CAPA SEMÁNTICA · Roles tipográficos. Serif para leer, mono para metadatos.",
+  "font": {
+    "display": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.serif}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.48}"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.regular}",
+        "$description": "Los titulares serif nunca van en negrita"
+      }
+    },
+    "title": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.serif}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.24}"
+      }
+    },
+    "body": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.serif}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.18}"
+      }
+    },
+    "button": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.serif}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.18}"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.semibold}"
+      }
+    },
+    "eyebrow": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.mono}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.14}"
+      }
+    },
+    "subtitle": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.serif}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.18}"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.semibold}"
+      }
+    },
+    "label": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.sans}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.14}"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      }
+    },
+    "helper": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.sans}"
+      },
+      "size": {
+        "$type": "dimension",
+        "$value": "{font.size.14}"
+      }
+    }
+  }
+}

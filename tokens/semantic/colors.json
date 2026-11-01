@@ -1,0 +1,163 @@
+{
+  "$description": "CAPA SEMÁNTICA · Para qué sirve cada color. Es la única capa que pueden usar los componentes.",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "{color.ivory.50}",
+        "$description": "Fondo de página"
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.ivory.100}",
+        "$description": "Superficies elevadas (tarjetas) sin sombra"
+      },
+      "warm": {
+        "$type": "color",
+        "$value": "{color.oat.200}",
+        "$description": "Superficie destacada"
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.black}",
+        "$description": "Bandas negras a sangre"
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.slate.900}"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.slate.500}",
+        "$description": "Metadatos y eyebrows. Se usa slate.500 en lugar de cloud.400 porque cumple contraste AA."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.ivory.50}",
+        "$description": "Texto sobre bandas negras"
+      }
+    },
+    "action": {
+      "primary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.slate.900}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.slate.700}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.ivory.50}"
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.ivory.50}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.ivory.100}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.slate.900}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.slate.900}"
+        }
+      },
+      "tertiary": {
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.ivory.100}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.cloud.600}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.slate.900}"
+        }
+      },
+      "disabled": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.ivory.150}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.cloud.600}"
+        }
+      }
+    },
+    "field": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.ivory.50}",
+        "$description": "Fondo de campos de formulario"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.cloud.600}",
+        "$description": "Borde en reposo (contraste 3:1 sobre crema)"
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{color.slate.500}"
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{color.slate.900}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.slate.900}"
+      },
+      "placeholder": {
+        "$type": "color",
+        "$value": "{color.slate.500}"
+      },
+      "control": {
+        "$type": "color",
+        "$value": "{color.slate.900}",
+        "$description": "Color de la marca de checkbox y radio"
+      }
+    },
+    "feedback": {
+      "error": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.rust.700}",
+          "$description": "Mensajes de error. Nunca como fondo."
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.rust.700}"
+        }
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.oat.200}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.slate.900}"
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "{color.slate.900}"
+      }
+    }
+  }
+}

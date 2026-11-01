@@ -1,0 +1,77 @@
+{
+  "name": "Badge",
+  "version": "1.0.0",
+  "status": "stable",
+  "owner": "Xavier Pascual · Mokkapp.com",
+  "description": "Etiqueta breve para clasificar o indicar un estado. No es interactiva.",
+  "files": {
+    "component": "components/badge/badge.tsx",
+    "styles": "components/badge/badge.css",
+    "test": "components/badge/badge.spec.ts"
+  },
+  "anatomy": [
+    "contenedor",
+    "texto"
+  ],
+  "props": {
+    "variant": {
+      "type": "enum",
+      "values": [
+        "neutral",
+        "strong",
+        "outline"
+      ],
+      "default": "neutral",
+      "description": "neutral para categorías, strong para destacar, outline para metadatos"
+    },
+    "children": {
+      "type": "string",
+      "required": true,
+      "description": "Texto de 1 o 2 palabras"
+    }
+  },
+  "states": [
+    "default"
+  ],
+  "tokens": {
+    "neutral.background": "color.surface.warm",
+    "neutral.text": "color.text.primary",
+    "strong.background": "color.action.primary.bg",
+    "strong.text": "color.action.primary.text",
+    "outline.border": "color.border.strong",
+    "outline.text": "color.text.primary",
+    "border.width": "size.border.default",
+    "radius": "size.radius.control",
+    "padding.x": "size.space.badge-x",
+    "padding.y": "size.space.badge-y",
+    "font.family": "font.eyebrow.family",
+    "font.size": "font.eyebrow.size"
+  },
+  "content": {
+    "guideline": "content/voice.md#badges",
+    "maxWords": 2
+  },
+  "a11y": {
+    "element": "span",
+    "meaning": "El significado está en el texto, nunca solo en el color",
+    "contrast": "Texto ≥ 4.5:1 en todas las variantes"
+  },
+  "rules": {
+    "always": [
+      "Texto en mayúsculas mediante CSS, escrito en minúsculas"
+    ],
+    "never": [
+      "Hacerlo clicable",
+      "Más de 2 palabras",
+      "Iconos",
+      "Colores de acento"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Tipografía mono en mayúsculas",
+      "why": "La marca reserva la mono para metadatos breves: un badge es exactamente eso."
+    }
+  ],
+  "openQuestions": []
+}

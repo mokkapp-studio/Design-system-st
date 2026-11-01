@@ -1,0 +1,73 @@
+{
+  "$description": "CAPA PRIMITIVA · La paleta en bruto: qué colores existen. Los componentes NUNCA usan estos tokens directamente.",
+  "color": {
+    "slate": {
+      "900": {
+        "$type": "color",
+        "$value": "#141413",
+        "$description": "Tinta principal"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#3d3d3a"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#5e5d59"
+      }
+    },
+    "cloud": {
+      "600": {
+        "$type": "color",
+        "$value": "#87867f"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#b0aea5"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#d1cfc5"
+      }
+    },
+    "ivory": {
+      "50": {
+        "$type": "color",
+        "$value": "#faf9f5",
+        "$description": "Lienzo crema"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#f0eee6"
+      },
+      "150": {
+        "$type": "color",
+        "$value": "#e8e6dc"
+      }
+    },
+    "oat": {
+      "200": {
+        "$type": "color",
+        "$value": "#e3dacc"
+      }
+    },
+    "clay": {
+      "500": {
+        "$type": "color",
+        "$value": "#d97757",
+        "$description": "Acento latente. Existe en la paleta pero NO tiene significado semántico: la interfaz no puede usarlo."
+      }
+    },
+    "rust": {
+      "700": {
+        "$type": "color",
+        "$value": "#a3402a",
+        "$description": "Rojo de error. Cumple contraste AA sobre todas las superficies crema."
+      }
+    },
+    "black": {
+      "$type": "color",
+      "$value": "#000000"
+    }
+  }
+}

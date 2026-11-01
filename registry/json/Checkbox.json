@@ -1,0 +1,71 @@
+{
+  "name": "Checkbox",
+  "version": "1.0.0",
+  "status": "stable",
+  "owner": "Xavier Pascual · Mokkapp.com",
+  "description": "Casilla para activar o aceptar una opción independiente.",
+  "files": {
+    "component": "components/checkbox/checkbox.tsx",
+    "styles": "components/checkbox/checkbox.css",
+    "test": "components/checkbox/checkbox.spec.ts"
+  },
+  "anatomy": ["casilla", "etiqueta", "texto de ayuda (opcional)", "mensaje de error (opcional)"],
+  "props": {
+    "label": { "type": "string", "required": true, "description": "Texto de la opción. Toda la etiqueta es clicable" },
+    "name": { "type": "string", "required": false, "description": "Nombre del campo en el formulario" },
+    "hint": { "type": "string", "required": false, "description": "Ayuda breve bajo la etiqueta" },
+    "error": { "type": "string", "required": false, "description": "Mensaje de error (por ejemplo, aceptar condiciones)" },
+    "required": { "type": "boolean", "default": false, "description": "Opción obligatoria" },
+    "disabled": { "type": "boolean", "default": false, "description": "Opción desactivada" }
+  },
+  "states": ["unchecked", "checked", "focus", "error", "disabled"],
+  "tokens": {
+    "control": "color.field.control",
+    "border": "color.field.border",
+    "label.text": "color.text.primary",
+    "hint.text": "color.text.secondary",
+    "error.text": "color.feedback.error.text",
+    "disabled.text": "color.action.disabled.text",
+    "focus.ring": "color.focus.ring",
+    "focus.width": "size.border.focus",
+    "focus.offset": "size.space.focus-offset",
+    "size": "size.control.check",
+    "target": "size.control.height",
+    "gap": "size.space.stack-sm",
+    "helper.gap": "size.space.field-gap",
+    "label.font.family": "font.body.family",
+    "label.font.size": "font.body.size",
+    "helper.font.family": "font.helper.family",
+    "helper.font.size": "font.helper.size"
+  },
+  "content": {
+    "guideline": "content/voice.md#formularios",
+    "maxWords": 12
+  },
+  "a11y": {
+    "element": "input type=\"checkbox\" nativo",
+    "label": "El input está dentro de su <label>: toda la etiqueta es clicable",
+    "minTarget": "Área táctil de 44px de alto",
+    "description": "Ayuda y error se enlazan con aria-describedby"
+  },
+  "rules": {
+    "always": [
+      "Usar el checkbox nativo del navegador (accesible por defecto)",
+      "Redactar la etiqueta en positivo: lo que pasa al marcarla"
+    ],
+    "never": [
+      "Usarlo para acciones inmediatas (para eso existe un interruptor o un botón)",
+      "Etiquetas en negativo (\"No quiero recibir…\")",
+      "Valores hex o px escritos a mano"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Checkbox nativo con accent-color",
+      "why": "Mantiene teclado, lector de pantalla y estados del sistema sin reconstruirlos. El color de marca llega con un solo token."
+    }
+  ],
+  "openQuestions": [
+    "¿Hace falta un estado indeterminado para listas con selección parcial?"
+  ]
+}

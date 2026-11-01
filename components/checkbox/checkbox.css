@@ -1,0 +1,59 @@
+/* Checkbox · solo usa los tokens declarados en registry/json/Checkbox.json */
+
+.checkbox {
+  display: grid;
+  align-content: start;
+  gap: var(--size-space-field-gap);
+}
+
+.checkbox__row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-space-stack-sm);
+  min-height: var(--size-control-height);
+  cursor: pointer;
+}
+
+.checkbox__control {
+  flex: none;
+  width: var(--size-control-check);
+  height: var(--size-control-check);
+  margin: 0;
+  accent-color: var(--color-field-control);
+  border-color: var(--color-field-border);
+  cursor: inherit;
+}
+
+.checkbox__control:focus-visible {
+  outline: var(--size-border-focus) solid var(--color-focus-ring);
+  outline-offset: var(--size-space-focus-offset);
+}
+
+.checkbox__label {
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  color: var(--color-text-primary);
+}
+
+.checkbox__row:has(.checkbox__control:disabled) {
+  cursor: not-allowed;
+}
+
+.checkbox__row:has(.checkbox__control:disabled) .checkbox__label {
+  color: var(--color-action-disabled-text);
+}
+
+.checkbox__hint,
+.checkbox__error {
+  margin: 0;
+  font-family: var(--font-helper-family);
+  font-size: var(--font-helper-size);
+}
+
+.checkbox__hint {
+  color: var(--color-text-secondary);
+}
+
+.checkbox__error {
+  color: var(--color-feedback-error-text);
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Alert",
+  "version": "1.0.0",
+  "status": "stable",
+  "owner": "Xavier Pascual · Mokkapp.com",
+  "description": "Informa del resultado de una acción importante (por ejemplo, un pago) dentro del flujo de la página.",
+  "files": {
+    "component": "components/alert/alert.tsx",
+    "styles": "components/alert/alert.css",
+    "test": "components/alert/alert.spec.ts"
+  },
+  "anatomy": ["contenedor con borde lateral", "título", "texto (opcional)", "acción (opcional, máximo 1)"],
+  "props": {
+    "variant": { "type": "enum", "values": ["info", "error"], "default": "info", "description": "info para estados neutros, error cuando algo ha fallado y la persona puede actuar" },
+    "title": { "type": "string", "required": true, "description": "Qué ha pasado, en 6 palabras como máximo" },
+    "children": { "type": "node", "required": false, "description": "Motivo y qué puede hacer la persona. Puede incluir un Button" }
+  },
+  "states": ["default"],
+  "tokens": {
+    "background": "color.surface.raised",
+    "text": "color.text.primary",
+    "info.accent": "color.border.strong",
+    "error.accent": "color.feedback.error.border",
+    "error.title": "color.feedback.error.text",
+    "border.width": "size.border.default",
+    "accent.width": "size.border.accent",
+    "border.color": "color.border.subtle",
+    "radius": "size.radius.control",
+    "padding": "size.space.alert",
+    "gap": "size.space.stack-sm",
+    "title.font.family": "font.subtitle.family",
+    "title.font.size": "font.subtitle.size",
+    "title.font.weight": "font.subtitle.weight",
+    "body.font.family": "font.body.family",
+    "body.font.size": "font.body.size"
+  },
+  "content": {
+    "guideline": "content/voice.md#avisos",
+    "maxWords": 6
+  },
+  "a11y": {
+    "element": "div",
+    "role": "error → role=\"alert\" (se anuncia de inmediato); info → role=\"status\"",
+    "meaning": "El tipo de aviso se entiende por el texto, no solo por el color"
+  },
+  "rules": {
+    "always": ["Explicar el motivo y el siguiente paso", "Usar solo los tokens declarados en este contrato"],
+    "never": [
+      "Fondo rojo: el rojo solo va en el borde lateral y en el título",
+      "Más de una acción",
+      "Sombras (box-shadow)",
+      "Bloquear la pantalla (para eso existe un diálogo)"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Rojo solo en el borde lateral y el título",
+      "why": "En las pruebas, un fondo rojo entero generaba ansiedad en un momento delicado como un pago fallido."
+    },
+    {
+      "decision": "Una sola acción",
+      "why": "Con dos opciones, la persona duda. El aviso propone un único siguiente paso."
+    }
+  ],
+  "openQuestions": [
+    "¿El aviso debe poder cerrarse o desaparecer solo?",
+    "¿Necesitamos una variante de éxito?"
+  ]
+}

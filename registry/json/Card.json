@@ -1,0 +1,71 @@
+{
+  "name": "Card",
+  "version": "1.0.0",
+  "status": "stable",
+  "owner": "Xavier Pascual · Mokkapp.com",
+  "description": "Agrupa un contenido relacionado (un artículo, una idea, un recurso) sobre el lienzo.",
+  "files": {
+    "component": "components/card/card.tsx",
+    "styles": "components/card/card.css",
+    "test": "components/card/card.spec.ts"
+  },
+  "anatomy": ["contenedor", "eyebrow (opcional)", "título", "cuerpo"],
+  "props": {
+    "variant": { "type": "enum", "values": ["cream", "warm"], "default": "cream", "description": "cream por defecto; warm para destacar un elemento" },
+    "eyebrow": { "type": "string", "required": false, "description": "Categoría o metadato breve" },
+    "title": { "type": "string", "required": true, "description": "Título de la tarjeta" },
+    "headingLevel": { "type": "enum", "values": [2, 3, 4], "default": 3, "description": "Nivel del encabezado para mantener la jerarquía de la página" },
+    "children": { "type": "node", "required": false, "description": "Cuerpo de la tarjeta" }
+  },
+  "states": ["default"],
+  "tokens": {
+    "cream.background": "color.surface.raised",
+    "cream.border": "color.border.subtle",
+    "warm.background": "color.surface.warm",
+    "border.width": "size.border.default",
+    "radius": "size.radius.surface",
+    "padding": "size.space.surface",
+    "gap": "size.space.stack-sm",
+    "text": "color.text.primary",
+    "eyebrow.text": "color.text.secondary",
+    "eyebrow.font.family": "font.eyebrow.family",
+    "eyebrow.font.size": "font.eyebrow.size",
+    "title.font.family": "font.title.family",
+    "title.font.size": "font.title.size",
+    "body.font.family": "font.body.family",
+    "body.font.size": "font.body.size"
+  },
+  "content": {
+    "guideline": "content/voice.md#tarjetas",
+    "maxWords": 8
+  },
+  "a11y": {
+    "element": "article",
+    "heading": "El título es un encabezado real (h2–h4) según headingLevel",
+    "contrast": "Texto ≥ 4.5:1 sobre ambas variantes"
+  },
+  "rules": {
+    "always": [
+      "Separar la tarjeta del fondo con cambio de tono y borde de 1px",
+      "Usar solo los tokens declarados en este contrato"
+    ],
+    "never": [
+      "Sombras (box-shadow)",
+      "Más de un nivel de jerarquía dentro de la tarjeta",
+      "Variantes que no estén en props.variant"
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Sin sombra",
+      "why": "La profundidad se consigue con superficies, no con sombras. Es una decisión de marca (docs/DESIGN.md)."
+    },
+    {
+      "decision": "Eyebrow en color.text.secondary (slate.500)",
+      "why": "El gris claro de la referencia (cloud.400) no llega al contraste AA sobre crema."
+    }
+  ],
+  "openQuestions": [
+    "¿La tarjeta completa debe ser clicable cuando enlaza a un artículo?"
+  ]
+}

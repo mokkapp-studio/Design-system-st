@@ -1,0 +1,116 @@
+{
+  "$description": "CAPA SEMÁNTICA · Radios, espaciados y medidas con significado.",
+  "size": {
+    "radius": {
+      "control": {
+        "$type": "dimension",
+        "$value": "{scale.4}",
+        "$description": "Botones e inputs"
+      },
+      "surface": {
+        "$type": "dimension",
+        "$value": "{scale.8}",
+        "$description": "Tarjetas y superficies"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "dimension",
+        "$value": "{scale.0-5}"
+      },
+      "focus": {
+        "$type": "dimension",
+        "$value": "{scale.1}"
+      },
+      "accent": {
+        "$type": "dimension",
+        "$value": "{scale.2}",
+        "$description": "Borde lateral de los avisos"
+      }
+    },
+    "control": {
+      "height": {
+        "$type": "dimension",
+        "$value": "{scale.22}",
+        "$description": "Altura mínima táctil"
+      },
+      "check": {
+        "$type": "dimension",
+        "$value": "{scale.10}",
+        "$description": "Tamaño de la casilla del checkbox"
+      }
+    },
+    "space": {
+      "control-x": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      },
+      "control-y": {
+        "$type": "dimension",
+        "$value": "{scale.6}"
+      },
+      "stack-sm": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "stack-md": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      },
+      "stack-lg": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      },
+      "surface": {
+        "$type": "dimension",
+        "$value": "{scale.16}",
+        "$description": "Padding interior de tarjetas"
+      },
+      "gutter": {
+        "$type": "dimension",
+        "$value": "{scale.16}"
+      },
+      "section": {
+        "$type": "dimension",
+        "$value": "{scale.48}",
+        "$description": "Padding vertical de cada banda"
+      },
+      "focus-offset": {
+        "$type": "dimension",
+        "$value": "{scale.1}"
+      },
+      "field-x": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      },
+      "field-gap": {
+        "$type": "dimension",
+        "$value": "{scale.2}",
+        "$description": "Separación entre label, campo y ayuda"
+      },
+      "badge-x": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "badge-y": {
+        "$type": "dimension",
+        "$value": "{scale.1}"
+      },
+      "alert": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      }
+    },
+    "layout": {
+      "reading": {
+        "$type": "dimension",
+        "$value": "{scale.360}",
+        "$description": "Columna de lectura"
+      },
+      "page": {
+        "$type": "dimension",
+        "$value": "{scale.560}"
+      }
+    }
+  }
+}
